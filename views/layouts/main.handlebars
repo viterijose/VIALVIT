@@ -17,9 +17,24 @@
 	 crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
 	 crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+	<script>
+		// Initialize and add the map
+		function initMap() {
+			// The location of Uluru
+			var uluru = { lat: -0.257478, lng: -78.545216 };
+			// The map, centered at Uluru
+			var map = new google.maps.Map(
+				document.getElementById('map'), { zoom: 16, center: uluru });
+			// The marker, positioned at Uluru
+			var marker = new google.maps.Marker({ position: uluru, map: map });
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw7yxyp0-ZWs8k-q5iaxUyKuq1yRpLX3Q&callback=initMap">
+	</script> 
 	{{{ body }}}
 </body>
 
