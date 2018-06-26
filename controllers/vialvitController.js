@@ -4,9 +4,7 @@ var router = express.Router();
 // var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
-    Aluminio = {
-        Aluminio: "/assets/images/Aluminio.jpg"
-    }
-    res.render("index",Aluminio);
+
+    res.render("home");
 });
 module.exports = router;
